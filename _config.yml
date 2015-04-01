@@ -1,2 +1,3 @@
 name: Julia Nething
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
