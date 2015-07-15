@@ -54,10 +54,13 @@ GitHub takes all of the features of Git and adds new features:
 
 Install Git for the first time
 : **git**
+
 Configure environment so your git commits have your name
 : **git config --global user.name "Julia Nething"**
+
 Configure environment so your git commits have your email
 : **git config --global user.email cjnething@gmail.com**
+
 Create a local version of a repository on GitHub
 : **git clone https://github.com/cjnething/project-euler.git**
 
