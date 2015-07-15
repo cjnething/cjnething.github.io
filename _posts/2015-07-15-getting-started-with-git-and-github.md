@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Started with Git and GitHub"
-date: 2015-07-05
+date: 2015-07-15
 ---
 
 When I was first getting started with Git and GitHub, I had a lot of questions. After using Git/GitHub regularly over the past six months, I have a much better understanding of these tools and would love to pass that information along. If you are also trying to learn about Git and GitHub through blog posts and similar tutorials, hopefully this blog post will answer some questions that you have.
@@ -46,6 +46,18 @@ GitHub takes all of the features of Git and adds new features:
 - *cd*: Change Directory (move to a new location)
   # Ex. *cd algorithms*: changes to the algorithms folder
   # Ex. *cd ..*: changes to parent directory (".." moves to the parent) 
+- *open*: Open file in Finder
+  # Ex. *open coderbyte*: while in parent directory of coderbyte, opens the coderbyte file
+  # Ex. *open .*: while in the file you want to open, opens that file
+
+## Getting Started with Git
+| Goal | Terminal Command |
+| ------- | ------------- |
+| Install Git for the first time | git |
+| Configure environment so your git commits have your name | git config --global user.name "Julia Nething" |
+| Configure environment so your git commits have your email | git config --global user.email cjnething@gmail.com |
+| Create a local version of a repository on GitHub | git clone https://github.com/cjnething/project-euler.git |
+
 
 These are just a few of the questions and answers that I have about Git and GitHub. If you have any questions, or if you have any tools/tips for me, please leave a comment or send me an email (cjnething@gmail.com)!
 
