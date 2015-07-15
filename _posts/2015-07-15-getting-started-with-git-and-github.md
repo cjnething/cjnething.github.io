@@ -52,11 +52,31 @@ GitHub takes all of the features of Git and adds new features:
 
 ## Getting Started with Git
 | Goal | Terminal Command |
-| ------- | ------------- |
+| ------------- | ------------- |
 | Install Git for the first time | git |
 | Configure environment so your git commits have your name | git config --global user.name "Julia Nething" |
 | Configure environment so your git commits have your email | git config --global user.email cjnething@gmail.com |
 | Create a local version of a repository on GitHub | git clone https://github.com/cjnething/project-euler.git |
+
+*Install Git for the first time*
+: git
+
+## How to create a repository on GitHub
+1. Go to your GitHub profile page
+2. At the top of the page, click "+" to create new repository (Initialize: Yes)
+3. In order to clone it to your local machine, click on "Copy to Clipboard" on the right-hand panel
+4. In the Terminal: *git clone* (+ URL in clipboard)
+5. In the Terminal: open .
+6. In Finder, drag the folder of your new repository to your Sublime or other text editor
+7. Right-click repository name to add new file
+8. Make a change to the file (add a comment or something) and save (command + S)
+
+## Using Git
+Now that you have a repository and you have made a change to the repository that you would like to save to GitHub, here are the steps that you will need to complete.
+
+| Terminal Command | Result |
+| ---------------- | ---------------- |
+
 
 
 These are just a few of the questions and answers that I have about Git and GitHub. If you have any questions, or if you have any tools/tips for me, please leave a comment or send me an email (cjnething@gmail.com)!
