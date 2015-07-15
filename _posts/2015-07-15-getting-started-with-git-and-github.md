@@ -75,11 +75,19 @@ Create a local version of a repository on GitHub
 ## Using Git
 Now that you have a repository and you have made a change to the repository that you would like to save to GitHub, here are the steps that you will need to complete.
 
-| Terminal Command | Result |
-| ---------------- | ---------------- |
+1. Check what has changed
+: **git status**
+2. Add the changed files to the "staging area" to be committed
+: **git add .**
+3. Create a commit
+: **git commit**
+4. Write the commit message, then hit "ESC", then type in ":wq" (Write Quit)
+: **(commit message, esc, :wq)***
+: Example of a commit message: "Add a helper function that checks if a number is prime"
+: Commit messages help you remember what you accomplished and when so you can see the full history of your project
+5. Pushes commits to your GitHub
+: **git push origin master**
 
 
 
-These are just a few of the questions and answers that I have about Git and GitHub. If you have any questions, or if you have any tools/tips for me, please leave a comment or send me an email (cjnething@gmail.com)!
-
-
+This was just an introduction to Git and GitHub, and hopefully it was useful to you. If you have any questions, or if you have any tips for me, please leave a comment or send me an email at cjnething@gmail.com!
