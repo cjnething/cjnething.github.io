@@ -92,5 +92,12 @@ Now that you have a repository and you have made a change to the repository that
 : **git push origin master**
 
 
+# Further Resources
+- Pro Git: http://git-scm.com/book/en/v2 
+- Git Immersion: http://gitimmersion.com/ 
+- YouTube Git: https://www.youtube.com/user/GitHubGuides/featured 
+- Think Like a Git: http://think-like-a-git.net/sections/about-this-site.html
+- Code School’s Try Git: https://www.codeschool.com/courses/try-git (Basic course is free, further courses require a subscription)
+
 
 This was just an introduction to Git and GitHub, and hopefully it was useful to you. If you have any questions, or if you have any tips for me, please leave a comment or send me an email at cjnething@gmail.com!
