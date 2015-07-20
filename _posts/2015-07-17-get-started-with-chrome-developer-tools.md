@@ -38,5 +38,6 @@ Next, right-click on the "Shop by Department" option on the top-left page, and c
 Check out the "Elements" tab, and then look at the "Styles" tab on the right-hand side. 
 Next to the red-letter CSS options are boxes that are checked. Un-check some of those boxes, such as 'font-size', and see how that affects the page.
 
-#
+
+
 This was just an introduction to Chrome Developer Tools, and hopefully it was useful to you. If you have any questions, or if you have any tips for me, please leave a comment or send me an email at cjnething@gmail.com!
