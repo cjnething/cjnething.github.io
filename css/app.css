@@ -23,7 +23,7 @@
 }
 
 .centerMine h1 {
-  font-size: 150px;
+  font-size: 125px;
   text-align: center;
 }
 
@@ -125,7 +125,7 @@ h1 {
   font-family: 'Sacramento', cursive;
 }
 
-h2, h3, h4, h5, h6, p, ul {
+h2, h3, h4, h5, h6, p, ul, a {
   font-family: 'Sorts Mill Goudy', serif;
 }
 
