@@ -9,6 +9,10 @@
   color: #1F77D0;
 }
 
+.aboutMine ul {
+  list-style-type: none;
+}
+
 .blogMine {
   background: #F3EFE0;
 }
@@ -125,7 +129,7 @@ h2, h3, h4, h5, h6, p, ul {
   font-family: 'Sorts Mill Goudy', serif;
 }
 
-ul {
+.top-bar-section ul {
   list-style-type: none;
   padding:0;
   margin: 0;
