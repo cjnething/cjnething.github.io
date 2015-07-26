@@ -27,8 +27,12 @@
   text-align: center;
 }
 
-.centerMine h2 {
+.centerMine h2, h5 {
   text-align: center;
+}
+
+.centerMine h5 {
+  color: #1F77D0;
 }
 
 .contactMine {
