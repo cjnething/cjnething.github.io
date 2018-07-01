@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Pelo by Jeanette</title>
+    <meta name="description" content="Pelo by Jeannette">
+    <meta name="author" content="Jeannette Alcazar">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Poppins" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript" src="api.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="logo">pelo by jeanette</div>
+        <div class="nav-item-list">
+          <a href="#appointment" class="nav-item">make an appointment</a>
+          <a href="#services" class="nav-item">services</a>
+          <a href="#hours" class="nav-item">hours</a>
+          <a href="#bio" class="nav-item">bio</a>
+          <a href="#directions" class="nav-item">directions and parking</a>
+        </div>
+      </div>
+
+      <div class="wrapper-content">
+        <div id="appointment" class="content-section">
+          <div class="header">Make An Appointment</div>
+          <div class="content-container">
+            <div class="content-sub-container">
+              <a href="https://www.styleseat.com/pelobyjeanette" class="content-sub-header">Book an Appointment</a>
+            </div>
+            <div class="content-sub-container">
+              <div class="content-sub-header">Cancellation Policy</div>
+              <div class="content-item">If you need to cancel or reschedule your appointment 24 hour notice is required, otherwise 50% of your services will be charged.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="services" class="content-section">
+          <div class="header">Services</div>
+          <div class="content-container">
+            <div class="content-sub-container">
+              <div class="content-sub-header">Cut & Style</div>
+              <div class="content-item">Womens Haircut 85+</div>
+              <div class="content-item">Bang Trim 15</div>
+              <div class="content-item">Blowdry 65+</div>
+            </div>
+            <div class="content-sub-container">
+              <div class="content-sub-header">Haircolor</div>
+              <div class="content-item">Full Color 120+</div>
+              <div class="content-item">Color Retouch 90+</div>
+              <div class="content-item">Partial Highlight 145+</div>
+              <div class="content-item">Full Highlight 200+</div>
+              <div class="content-item">Specialty Color 175+</div>
+              <div class="content-item">Color Correction priced by consultation</div>
+            </div>
+            <div class="content-sub-container">
+              <div class="content-sub-header">Treatments</div>
+              <div class="content-item">Deep Conditioning 45+</div>
+              <div class="content-item">Olaplex 55+</div>
+              <div class="content-item">Add Blow-dry 35+</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="hours" class="content-section">
+          <div class="header">Hours</div>
+          <div class="content-container">
+            <div class="content-item">Tuesday 12PM - 8PM</div>
+            <div class="content-item">Wednesday 9AM - 5PM</div>
+            <div class="content-item">Thursday 12PM - 8PM</div>
+            <div class="content-item">Saturday 9AM - 5PM</div>
+            <div class="content-item">Sunday 9AM - 3PM</div>
+          </div>
+        </div>
+
+        <div id="bio" class="content-section">
+          <div class="header">Bio</div>
+          <div class="content-container">
+            Jeanette has always had a passion for the beauty industry. Oregon native, she ventured to San Diego and completed her training at the artful Paul Mitchell Academy in 2008. Inspired by fashion, music, art, and the latest beauty trends, she set her sight on Los Angeles. While in LA she has had tremendous opportunities from working with many creative teams on editorial shoots, exclusive training by elite Redken artist, and working at prestigious salons such as Umberto and Meche. In her free time she enjoys travel, food, and learning new things. She specializes in sun-kissed blondes and beachy waves.
+          </div>
+        </div>
+
+        <div id="directions" class="content-section">
+          <div class="header">Directions</div>
+          <div class="content-container">
+            <div class="content-sub-container">
+              <div class="content-sub-header">Parking</div>
+              <div class="content-item">
+                 Santa Monica Public Parking located adjacent to the Salon Republic off of 5th street that has a rate of $2.50 per hour or the Santa Monica Public Parking off of 4th Street that offers 90 minutes free parking. Alternatively, the 426 Santa Monica Boulevard building has an underground structure with a rat of $2.25 every 12mins or $10 an hour, however the rates on weekends and after 6pm weekly is a flat rate of $6.00.
+              </div>
+            </div>
+            <div class="content-sub-container map-container">
+              <div id="map"></div>
+              <div class="address-container">
+                 <div>1358 5th Street, Studio 504</div>
+                 <div>Santa Monica, CA 90401</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="contact-container">
+          <div class="contact-item">424.272.0391</div>
+          <div class="contact-item">contact@pelobyjeanette.com</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        var studio = {lat: 34.017668, lng: -118.494754},
+            map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 15, center: studio}),
+            marker = new google.maps.Marker({position: studio, map: map});
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=" + googleMapApiKey + "&callback=initMap">
+    </script>
+  </body>
+</html>
+
