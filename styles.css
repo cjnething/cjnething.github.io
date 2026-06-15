@@ -1090,14 +1090,32 @@ a.artifact-card:hover {
 /* ── Footer ────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   text-align: center;
 }
 
 .site-footer p {
-  margin: 0;
+  margin: 0 0 var(--space-xs);
   font-size: 0.8125rem;
   color: var(--color-text-muted);
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer-tagline {
+  font-size: 0.9375rem !important;
+  color: var(--color-text) !important;
+}
+
+.site-footer-links a {
+  font-weight: 500;
+}
+
+.site-footer-copy {
+  margin-top: var(--space-sm) !important;
+  font-size: 0.75rem !important;
 }
 
 /* ── Animations ────────────────────────────────────────────── */
