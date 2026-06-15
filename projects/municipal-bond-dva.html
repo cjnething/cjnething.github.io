@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Municipal Bond Pricing — Julia Nething</title>
+    <meta name="description" content="OMSCS Data &amp; Visual Analytics team project combining machine learning and interactive visualization to help muni bond traders identify pricing outliers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-logo" href="../index.html">Julia Nething</a>
+        <ul class="nav-links">
+          <li><a href="../projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../philosophy.html">Philosophy</a></li>
+          <li><a href="../ai.html">AI</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-compact">
+        <div class="project-tags hero-tags">
+          <span class="project-tag">Data &amp; Visual Analytics</span>
+          <span class="project-tag">Machine Learning</span>
+          <span class="project-tag">Information Design</span>
+        </div>
+        <h1 class="hero-title hero-title-wide">Municipal Bond Pricing</h1>
+        <p class="hero-lede">
+          A team project combining machine learning and interactive visualization to help muni bond
+          traders sift through 260,000+ bonds and quickly identify pricing outliers—reducing
+          information asymmetry in an opaque, manually priced market.
+        </p>
+        <p class="hero-lede">
+          Team #153 · Georgia Tech OMSCS · Data &amp; Visual Analytics
+        </p>
+      </section>
+
+      <div class="page-content prose">
+        <div class="content-block">
+          <h2>Overview</h2>
+          <p>
+            Municipal bonds are debt securities issued by states, municipalities, and counties to
+            finance capital expenditures. They benefit issuers through lower funding costs and investors
+            through tax-free income—but tax implications, credit risk, liquidity, and dozens of other
+            interdependent factors make pricing complex and inefficient.
+          </p>
+          <p>
+            This project was completed as part of Georgia Tech's Data &amp; Visual Analytics course by
+            Team #153 (2Legit2Quit): Jacob Burbank-Goldrich, Janarthanan Gopi, Issac J Kuo,
+            Saswata Misra, Constance Julia Nething, and Angela Tran.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Problem</h2>
+          <p>
+            Muni bond pricing is opaque and inefficient, driven by high complexity and unequal
+            information between parties. Pricing is done manually by a handful of experts. Prior
+            research has explored data-driven approaches—ridge regression, neural networks, support
+            vector regression—but these haven't broadly taken hold, and none incorporated a
+            configurable visual layer to help traders refine their analysis on a case-by-case basis.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Objective</h2>
+          <p>
+            Build a tool that helps muni bond traders identify outliers in their existing pricing
+            scheme—bonds priced too high (may never sell) or too low (profit not maximized)—so they
+            can price inventory appropriately and trade more efficiently.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Approach</h2>
+          <p>
+            Our innovation was combining a machine learning pricing baseline with a configurable
+            visualization layer—allowing traders to compare their bonds against comparable bonds,
+            reduce research time, and increase transparency in the market.
+          </p>
+          <ul>
+            <li>Use ML to establish a pricing baseline, then identify outliers relative to that baseline</li>
+            <li>Display similar bonds in a configurable visualization with associated metrics</li>
+            <li>Enable drill-down from high-level geographic patterns to individual bond details</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Data &amp; modeling</h2>
+          <p>
+            We acquired three populations of U.S. municipal bonds as of September 2020, totaling
+            272,283 records—historical trades from MSRB, competing bonds from Bloomberg Runz, and
+            current inventory from a team member's firm. After enrichment with Bloomberg security-level
+            data and cleaning (excluding infeasible spreads), we analyzed 266,837 records across
+            17 attributes.
+          </p>
+          <p>
+            We evaluated multiple clustering algorithms (K-means, PCA + DBSCAN, Kamila, FAMD) and
+            regression approaches. Clustering did not produce sufficiently accurate groupings for
+            the business purpose. After systematic model comparison, an <strong>Adaboost Decision Tree
+            Regressor</strong> was selected as the final model (MSE 0.0239, RMSE 0.1546)—outperforming
+            linear regression, Random Forest, and cluster-based regression approaches.
+          </p>
+          <p>
+            The model predicted spreads on the inventory population, and we computed a relative
+            "sigma" score—(actual spread − model spread) / standard deviation—measuring how far each
+            bond's pricing deviates from the model baseline relative to expected noise.
+          </p>
+          <p><strong>Tools:</strong> Python (pandas, matplotlib, scikit-learn) for data cleaning, exploratory analysis, and modeling; R for additional clustering experiments (K-means, Kamila, FAMD).</p>
+        </div>
+
+        <div class="content-block">
+          <h2>Visualization &amp; interface</h2>
+          <p>
+            The UI was designed to help traders navigate complexity without drowning in data:
+          </p>
+          <ul>
+            <li>
+              <strong>Overview:</strong> A choropleth map of the U.S. color-coded by outlier count per
+              state, paired with a sortable table of states and outlier scores—interconnected so
+              selecting a state highlights the corresponding row
+            </li>
+            <li>
+              <strong>Drill-down:</strong> Right-clicking a state opens a scatterplot of bonds (outlier
+              score on x-axis, spread on y-axis) with a ranked bond list and hover/click details
+            </li>
+            <li>
+              <strong>Filters:</strong> Additional controls to narrow bonds displayed on the scatterplot
+            </li>
+          </ul>
+          <p>
+            Color coding made actionable insights immediately visible: green for bonds priced too high
+            (spread too low, may not sell), red for bonds priced too low (spread too high, gains not
+            maximized), and blue for outlier historical trades that might signal future investment
+            opportunities.
+          </p>
+          <p>
+            The core design challenge: enable a user to sift through 260,000+ bonds and quickly
+            surface the handful worth investigating—presenting enough context to support a decision
+            without overwhelming cognitive load.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Outcomes</h2>
+          <p>
+            The tool successfully demonstrated pricing opportunities across the inventory
+            population—bonds that should be priced lower to increase sale probability, and bonds
+            that should be priced higher to maximize profitability. An unanticipated benefit: visualizing
+            outliers in the historical population helped identify patterns in past trades that might
+            represent future investment opportunities.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>My role</h2>
+          <p>
+            Equal contributor (21% effort) alongside three other team members, spanning data analysis,
+            modeling experiments, visualization design, and report writing.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Demo</h2>
+          <a class="video-link-card" href="https://www.youtube.com/watch?v=haAus34GPeY" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.youtube.com/vi/haAus34GPeY/hqdefault.jpg"
+              alt="Municipal Bond Pricing demo video thumbnail"
+              width="480"
+              height="360"
+              loading="lazy">
+            <span class="video-link-label">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Watch demo on YouTube
+            </span>
+          </a>
+          <p class="video-link-note">
+            The demo walks through the choropleth overview, state drill-down, and outlier scatterplot.
+          </p>
+        </div>
+
+        <section class="artifacts">
+          <h2>Artifacts</h2>
+          <p>Full report, conference-style poster, and demo video.</p>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/municipal-bond-dva/report.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Final report</span>
+            </a>
+            <a class="artifact-card" href="../assets/municipal-bond-dva/poster.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Poster</span>
+              <span class="artifact-label">Conference poster</span>
+            </a>
+            <a class="artifact-card" href="https://www.youtube.com/watch?v=haAus34GPeY" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Demo walkthrough</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../projects.html">← All projects</a> · &copy; 2026 Julia Nething</p>
+    </footer>
+  </body>
+</html>

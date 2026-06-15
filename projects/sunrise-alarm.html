@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sunrise Alarm Clock Redesign — Julia Nething</title>
+    <meta name="description" content="HCI redesign of the Philips SmartSleep Wake-up Light based on Amazon review analysis and heuristic evaluation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-logo" href="../index.html">Julia Nething</a>
+        <ul class="nav-links">
+          <li><a href="../projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../philosophy.html">Philosophy</a></li>
+          <li><a href="../ai.html">AI</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-compact">
+        <div class="project-tags hero-tags">
+          <span class="project-tag">HCI</span>
+          <span class="project-tag">Review Analysis</span>
+          <span class="project-tag">Physical UI</span>
+        </div>
+        <h1 class="hero-title hero-title-wide">Philips SmartSleep Redesign</h1>
+        <p class="hero-lede">
+          Redesign of a Wirecutter-recommended sunrise alarm clock—grounded in systematic
+          Amazon review analysis and heuristic evaluation, with mockups addressing gulf
+          of execution problems in a groggy-morning context.
+        </p>
+        <p class="hero-lede">Georgia Tech OMSCS · Human-Computer Interaction</p>
+      </section>
+
+      <div class="page-content prose">
+        <div class="content-block">
+          <h2>Problem</h2>
+          <p>
+            The Philips SmartSleep Wake-up Light HF3520/60 simulates sunrise to wake users
+            gradually—but despite being recommended by Wirecutter, Amazon reviews reveal
+            significant usability problems. The device has no companion app; redesign focused
+            on the physical interface alone.
+          </p>
+          <p>
+            Common tasks include setting alarms, choosing sounds, snoozing, turning off alarms
+            and lights, using the sunset feature, and adjusting volume and brightness—often
+            while half-asleep, with light in your face, and a partner asking you to turn it off.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Research — review analysis</h2>
+          <p>
+            Needfinding analyzed the top 100 critical Amazon reviews, categorizing each into
+            41 complaint types. Design-relevant findings (excluding durability/price complaints
+            outside scope):
+          </p>
+          <ul>
+            <li><strong>43 reviews:</strong> buttons small, unintuitive, hard to reach, or hard to identify</li>
+            <li><strong>24 reviews:</strong> difficult setup / steep learning curve</li>
+            <li><strong>Context blindness:</strong> buttons manageable by day, unusable when just woken up</li>
+            <li><strong>10 reviews:</strong> hard to turn off alarm; 3 hard to snooze; 6 easy to press wrong button</li>
+            <li><strong>5 reviews:</strong> turning off alarm doesn't turn off light—should be one action</li>
+            <li><strong>10 reviews:</strong> device easy to knock over, triggering accidental button presses</li>
+            <li><strong>Missing features:</strong> no alarm reset button, no auto time sync, limited sound options</li>
+          </ul>
+          <p>
+            Users want to "set and forget"—customize weekly schedules, adjust brightness,
+            and operate the device reliably without re-learning hidden button combinations.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Heuristic evaluation</h2>
+          <p><strong>What works:</strong> Physical buttons as affordances; alarm icons on display confirm state;
+            brightness/volume shown as numeric values (bridging gulf of evaluation); icon-based
+            controls for language flexibility; discoverable menu system with low-stakes exploration.</p>
+          <p><strong>What doesn't:</strong></p>
+          <ul>
+            <li>Alarm time requires rim button + face buttons + Select—a high learning curve for a common task</li>
+            <li>Snooze-looking emoji button actually triggers sunset (mapping failure)</li>
+            <li>Sunrise duration requires hidden two-button hold—not discoverable (expert blindspot)</li>
+            <li>Rim buttons invisible from front → high working memory load and gulf of execution</li>
+            <li>Volume adjustment requires flipping device to press button, then back to read display</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Redesign</h2>
+          <p>
+            Redesign focused on four core tasks: set up an alarm, turn off an alarm, snooze,
+            and adjust brightness/volume. Key changes:
+          </p>
+          <ul>
+            <li>
+              <strong>Separated form factors:</strong> semicircular light above a dedicated menu
+              panel—all controls visible from the front, no hidden rim buttons
+            </li>
+            <li>
+              <strong>Snooze via light face:</strong> tap the light surface (snooze icon) to snooze;
+              dedicated alarm-off button with clear display feedback
+            </li>
+            <li>
+              <strong>Structured menu navigation:</strong> home/menu → alarm settings → select
+              alarm → edit time, recurring days, on/off—with arrow keys and visible selection state
+            </li>
+            <li>
+              <strong>Live feedback:</strong> brightness/volume changes show numeric values and
+              icons in the display while adjusting, then fade after a few seconds
+            </li>
+            <li>
+              <strong>Stability:</strong> heavier base to prevent knock-over and accidental presses
+              (accessibility for tremors/mobility issues)
+            </li>
+            <li>
+              <strong>Alarm reset:</strong> dedicated reset action with clear visual confirmation
+            </li>
+          </ul>
+          <p>
+            Full mockups are below and in the
+            <a href="../assets/sunrise-alarm/final-report.pdf" target="_blank" rel="noopener noreferrer">final report</a>.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Redesign mockups</h2>
+          <div class="screenshot-gallery">
+            <figure>
+              <img src="../assets/sunrise-alarm/device-overview.png" alt="Overall device redesign with front-facing controls" loading="lazy">
+              <figcaption>Device overview</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/brightness-control.png" alt="Brightness adjustment with live numeric feedback" loading="lazy">
+              <figcaption>Brightness control</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/volume-control.png" alt="Volume adjustment with live numeric feedback" loading="lazy">
+              <figcaption>Volume control</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/alarm-reset.png" alt="Alarm reset with display confirmation" loading="lazy">
+              <figcaption>Alarm reset</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/snooze-tap.png" alt="Tap light surface to snooze" loading="lazy">
+              <figcaption>Snooze — tap light</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/menu-navigation.png" alt="Home menu with alarm, sound, and system settings" loading="lazy">
+              <figcaption>Menu navigation</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/sunrise-alarm/alarm-list.png" alt="Alarm selection list" loading="lazy">
+              <figcaption>Alarm list</figcaption>
+            </figure>
+            <figure class="screenshot-wide">
+              <img src="../assets/sunrise-alarm/alarm-edit.png" alt="Edit alarm time, recurring days, and on/off state" loading="lazy">
+              <figcaption>Alarm edit — time, days, on/off</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h2>Reflection</h2>
+          <p>
+            Review analysis surfaced problems invisible in product marketing—a device praised
+            by reviewers fails in the specific context of use (groggy, lit room, partner pressure).
+            That's a different research signal than interviews would provide: volume at scale,
+            but without user narrative depth.
+          </p>
+          <p>
+            The original design's expert blindspot—hidden button combos for sunrise duration—
+            is exactly the kind of pattern that creates capability gaps: users conclude a feature
+            doesn't exist because they can't discover it. The redesign prioritizes discoverability
+            and front-facing controls over aesthetic minimalism.
+          </p>
+        </div>
+
+        <section class="artifacts">
+          <h2>Artifacts</h2>
+          <p>Complete HCI design lifecycle report with review analysis, heuristic evaluation, and redesign mockups.</p>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/sunrise-alarm/final-report.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Full project report</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../projects.html">← All projects</a> · &copy; 2026 Julia Nething</p>
+    </footer>
+  </body>
+</html>

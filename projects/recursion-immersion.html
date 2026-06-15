@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recursion Immersion — Julia Nething</title>
+    <meta name="description" content="A solo EdTech research project: a web application combining multiple recursion teaching strategies for novice adult programmers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-logo" href="../index.html">Julia Nething</a>
+        <ul class="nav-links">
+          <li><a href="../projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../philosophy.html">Philosophy</a></li>
+          <li><a href="../ai.html">AI</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-compact">
+        <div class="project-tags hero-tags">
+          <span class="project-tag">EdTech</span>
+          <span class="project-tag">Solo Project</span>
+          <span class="project-tag">Development Track</span>
+        </div>
+        <h1 class="hero-title hero-title-wide">Recursion Immersion</h1>
+        <p class="hero-lede">
+          A web application that combines multiple research-backed strategies for teaching
+          recursion—letting learners choose their own path from high-level intuition through
+          real code to dedicated practice.
+        </p>
+        <p class="hero-lede">Solo project · Georgia Tech OMSCS · Educational Technology</p>
+      </section>
+
+      <div class="page-content prose">
+        <div class="content-block">
+          <h2>Overview</h2>
+          <p>
+            Recursion is introduced early in computer science curricula but remains one of the
+            hardest concepts for novice programmers to learn—and one of the hardest for instructors
+            to teach. There are many effective strategies, but no one-size-fits-all approach.
+            Students who struggle often conclude they aren't capable of succeeding in CS, when the
+            real problem is that they haven't found a strategy that clicks for them.
+          </p>
+          <p>
+            Recursion Immersion addresses this by combining structural, mathematical, game-based,
+            and code-level teaching techniques into a single platform where learners can try
+            different approaches until one makes sense—then focus on the problem types they find
+            most difficult.
+          </p>
+          <p>
+            This was a semester-long solo project for Georgia Tech's Educational Technology course
+            (Development Track), grounded in literature review and iterative feedback from peers
+            and bootcamp students.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Problem</h2>
+          <p>
+            As a technical mentor to novice adult programmers, I saw the same pattern repeatedly:
+            students told to "just practice" recursion without understanding it first. My approach
+            was to walk through problems step by step—but different students need different strategies,
+            and recursion spans many problem types (trees, permutations, physical puzzles). Some
+            students excel at one type while struggling with others.
+          </p>
+          <p>
+            Existing tools and curricula typically pick one or two techniques and require students
+            to follow a fixed sequence. Industry learners often self-teach via YouTube or LeetCode
+            without a structured path from intuition to code. The gap: a flexible, centralized
+            platform that bridges high-level understanding, coding recursive solutions, and
+            deliberate practice.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Research foundation</h2>
+          <p>
+            Literature review covered major teaching strategies and their limitations:
+          </p>
+          <ul>
+            <li><strong>Structural recursion</strong> — physical structures like nesting dolls or bulls-eyes (Kruse, 1982; Bruce et al., 2005)</li>
+            <li><strong>Mathematical recursion</strong> — fractals, geometric shapes, mathematical induction (Elenbogen &amp; O'Kennon, 1988; Gordon, 2006)</li>
+            <li><strong>Games</strong> — Cargo-Bot, acting out Tower of Hanoi in class (Chaffin et al., 2009; Lee et al., 2014; Benander &amp; Benander, 2008)</li>
+            <li><strong>Recursive graphs</strong> — visualizing call order (Hsin, 2008; identified for future work)</li>
+          </ul>
+          <p>
+            Common gaps in prior research: small samples without control groups, lack of replication,
+            and reliance on self-reported understanding rather than measurable outcomes. This project
+            aimed to build a tool informed by that research while acknowledging those evaluation
+            limitations.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Solution — the application</h2>
+          <p>
+            Recursion Immersion is a web-based application with three sections—a "choose your own
+            adventure" experience where learners start wherever their current understanding requires:
+          </p>
+
+          <h3>1. High Level Examples</h3>
+          <p>
+            Videos and pre/post-test questions focused on recursion without code—real-world and
+            diagram-based problems that build intuition first.
+          </p>
+          <ul>
+            <li><a href="https://youtu.be/VV2xiSEU4rA" target="_blank" rel="noopener noreferrer">Tower of Hanoi</a> — physical puzzle</li>
+            <li><a href="https://youtu.be/Qx_jqvJsBoA" target="_blank" rel="noopener noreferrer">Dog Birthday Party</a> — tree traversal with diagram and code</li>
+          </ul>
+
+          <h3>2. Real Code Examples</h3>
+          <p>
+            Videos and pre/post-test questions at the code level—problems that aren't easily drawn
+            out, teaching techniques like solving the simplest case first and building up.
+          </p>
+          <ul>
+            <li><a href="https://youtu.be/gJQ3wysw7J4" target="_blank" rel="noopener noreferrer">Restaurant Orders (Permutation)</a></li>
+            <li><a href="https://youtu.be/At44iDfmlX4" target="_blank" rel="noopener noreferrer">Range Sum of BST</a> — LeetCode-style tree problem</li>
+          </ul>
+
+          <h3>3. Practice Problems</h3>
+          <p>
+            Curated links to external coding problems with difficulty ratings and category tags
+            (Trees, Linked Lists, etc.) so learners can apply techniques through deliberate practice
+            and focus on weak areas.
+          </p>
+
+          <p>
+            <strong>Target audience:</strong> novice adult programmers (though applicable to any
+            learner comfortable with JavaScript). <strong>Goal:</strong> a centralized place to
+            learn recursion techniques and bridge the gap between high-level understanding, writing
+            recursive code, and tackling varied problem types.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Screenshots</h2>
+          <p>Application UI from the shipped Recursion Immersion platform. Pre/post-test questions are in the <a href="../assets/recursion-immersion/final-paper.pdf" target="_blank" rel="noopener noreferrer">final paper appendices</a>.</p>
+          <div class="screenshot-gallery">
+            <figure>
+              <img src="../assets/recursion-immersion/splash-page.png" alt="Recursion Immersion splash page on load" loading="lazy">
+              <figcaption>Splash page</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/recursion-immersion/high-level-page.png" alt="High Level Examples listing page" loading="lazy">
+              <figcaption>High Level Examples</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/recursion-immersion/high-level-detail.png" alt="Tower of Hanoi high level example detail view" loading="lazy">
+              <figcaption>High level detail — Tower of Hanoi</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/recursion-immersion/real-code-page.png" alt="Real Code Examples listing page" loading="lazy">
+              <figcaption>Real Code Examples</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/recursion-immersion/real-code-detail.png" alt="Restaurant Orders permutation example detail view" loading="lazy">
+              <figcaption>Real code detail — Restaurant Orders</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/recursion-immersion/practice-page.png" alt="Practice Problems page" loading="lazy">
+              <figcaption>Practice Problems</figcaption>
+            </figure>
+            <figure class="screenshot-wide">
+              <img src="../assets/recursion-immersion/practice-page-full.png" alt="Practice Problems page full scroll view" loading="lazy">
+              <figcaption>Practice Problems (full view)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h2>Technology stack</h2>
+          <ul>
+            <li><strong>Frontend:</strong> React, JavaScript, HTML/CSS, Material UI</li>
+            <li><strong>Build:</strong> Webpack, Babel</li>
+            <li><strong>Backend:</strong> Node, Express</li>
+            <li><strong>Database:</strong> PostgreSQL (videos, pre/post-test questions, practice problems)</li>
+            <li><strong>Hosting:</strong> Heroku (functional prototype; no longer deployed)</li>
+          </ul>
+          <p>
+            The application was built and evaluated as a working prototype. Screenshots, instructional
+            videos, and written deliverables below document the design and outcomes—the live deployment
+            is no longer available.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Methodology &amp; evaluation</h2>
+          <p>
+            Evaluation combined peer review throughout the semester with live student feedback
+            from bootcamp recursion lectures and office hours (~25–30 adult learners per class).
+          </p>
+          <ul>
+            <li>Four rounds of peer feedback on research</li>
+            <li>One round on build plan, two rounds on development progress</li>
+            <li>Recursion lectures iteratively restructured around the three app sections</li>
+            <li>Most recent lecture: live Tower of Hanoi demo → Restaurant Permutation demo → array flattening practice problem</li>
+            <li>Example videos shared with three students for async feedback</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Results</h2>
+          <h3>Peer feedback</h3>
+          <p>
+            Overall positive—peers reported the topic resonated personally and that they would
+            use the tool. Design praised as clean and easy to follow. Implemented suggestions
+            included reordering pages (Practice Problems moved to the right). Suggestions not
+            implemented in time: recursive call visualization and bookmarking problems.
+          </p>
+
+          <h3>Student feedback</h3>
+          <p>
+            <strong>Tower of Hanoi (live demo):</strong> Some students had trouble following the
+            pattern and connecting it to code. All but two felt they could solve the puzzle on
+            their own; one understood the high-level pattern but worried about details.
+          </p>
+          <p>
+            <strong>Restaurant Permutation (live demo):</strong> Strategy shown was to solve with
+            for loops first, restructure loops identically, then move code into recursive calls.
+            All students could write the loop solution; some were confused at the recursion step.
+            One student preferred their existing strategy.
+          </p>
+          <p>
+            <strong>Async video feedback:</strong> Three students who received example videos from
+            the site all self-reported they were helpful for understanding.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Limitations &amp; future work</h2>
+          <p>
+            One-semester scope limited the number of lecture iterations and student sample size.
+            Feedback was largely subjective (self-reported understanding) rather than quantitative
+            pre/post testing—a gap the paper identifies explicitly.
+          </p>
+          <p>Planned improvements include:</p>
+          <ul>
+            <li>GitHub authentication and progress tracking (partially built; session bug prevented completion)</li>
+            <li>Pre/post-test answer submission and aggregated difficulty data</li>
+            <li>Recursive call visualization (recursive graphs)</li>
+            <li>Problem-type detail pages combining all three sections per category</li>
+            <li>Discussion forum and expanded problem/video library</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Reflection</h2>
+          <p>
+            There is no single perfect way to teach recursion—different students resonate with
+            different strategies. The value of this tool is flexibility: learners gravitate toward
+            the examples and problem types they need most, rather than following a fixed curriculum.
+            Early student feedback is optimistic, but rigorous evaluation would require quantitative
+            pre/post testing across larger cohorts over longer periods—the natural next step.
+          </p>
+          <p>
+            This project directly connects my teaching experience at Hack Reactor to formal
+            learning science research and shipped software—a through-line central to how I think
+            about capability-building products today.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Final presentation</h2>
+          <a class="video-link-card" href="https://www.youtube.com/watch?v=AYqKqKevIAE" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.youtube.com/vi/AYqKqKevIAE/hqdefault.jpg"
+              alt="Recursion Immersion final presentation thumbnail"
+              width="480"
+              height="360"
+              loading="lazy">
+            <span class="video-link-label">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Watch final presentation on YouTube
+            </span>
+          </a>
+        </div>
+
+        <section class="artifacts">
+          <h2>Artifacts</h2>
+          <p>Full research trail from proposal through final evaluation—papers, videos, and process documents.</p>
+
+          <h3>Final deliverables</h3>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/recursion-immersion/final-paper.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Final research paper</span>
+            </a>
+            <a class="artifact-card" href="https://www.youtube.com/watch?v=AYqKqKevIAE" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Final presentation</span>
+            </a>
+          </div>
+
+          <h3>Research process</h3>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/recursion-immersion/project-proposal.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Document</span>
+              <span class="artifact-label">Project proposal</span>
+            </a>
+            <a class="artifact-card" href="../assets/recursion-immersion/qualifier-question.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Document</span>
+              <span class="artifact-label">Qualifier question</span>
+            </a>
+            <a class="artifact-card" href="../assets/recursion-immersion/literature-review-1.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Literature review 1</span>
+            </a>
+            <a class="artifact-card" href="../assets/recursion-immersion/literature-review-2.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Literature review 2</span>
+            </a>
+            <a class="artifact-card" href="../assets/recursion-immersion/literature-review-3.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Paper</span>
+              <span class="artifact-label">Literature review 3</span>
+            </a>
+          </div>
+
+          <h3>Instructional videos</h3>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="https://youtu.be/VV2xiSEU4rA" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Tower of Hanoi</span>
+            </a>
+            <a class="artifact-card" href="https://youtu.be/Qx_jqvJsBoA" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Dog Birthday Party</span>
+            </a>
+            <a class="artifact-card" href="https://youtu.be/gJQ3wysw7J4" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Restaurant Orders</span>
+            </a>
+            <a class="artifact-card" href="https://youtu.be/At44iDfmlX4" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Video</span>
+              <span class="artifact-label">Range Sum of BST</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../projects.html">← All projects</a> · &copy; 2026 Julia Nething</p>
+    </footer>
+  </body>
+</html>

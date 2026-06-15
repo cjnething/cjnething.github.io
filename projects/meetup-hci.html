@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meetup HCI Redesign — Julia Nething</title>
+    <meta name="description" content="Full HCI design lifecycle for Meetup.com event search: needfinding, prototyping, and qualitative evaluation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-logo" href="../index.html">Julia Nething</a>
+        <ul class="nav-links">
+          <li><a href="../projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../philosophy.html">Philosophy</a></li>
+          <li><a href="../ai.html">AI</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-compact">
+        <div class="project-tags hero-tags">
+          <span class="project-tag">HCI</span>
+          <span class="project-tag">User Research</span>
+          <span class="project-tag">Design Lifecycle</span>
+        </div>
+        <h1 class="hero-title hero-title-wide">Meetup HCI Redesign</h1>
+        <p class="hero-lede">
+          A semester-long user-centered redesign of Meetup.com's event search—participant
+          observation, surveys, brainstorming, paper prototypes, and qualitative evaluation
+          with 25 participants.
+        </p>
+        <p class="hero-lede">Georgia Tech OMSCS · CS 6750 Human-Computer Interaction</p>
+      </section>
+
+      <div class="page-content prose">
+        <div class="content-block">
+          <h2>Problem</h2>
+          <p>
+            Meetup.com's search page has calendar and group views with limited filters, but
+            many real use cases are difficult: finding events by genre, searching across date
+            ranges, locating a specific group's next meeting, or finding groups when your
+            location has changed. The site assumes users know what they're looking for and
+            doesn't recover gracefully from common mistakes (wrong distance filter, misspelled
+            search).
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Research process</h2>
+          <p>
+            This project followed Georgia Tech's full HCI design lifecycle across five milestone
+            assignments (M1–M5):
+          </p>
+          <ul>
+            <li><strong>M1 — Problem space:</strong> Defined task, user types, and motivations for local event search</li>
+            <li><strong>M2 — Needfinding:</strong> Participant observation on Meetup.com, user survey (novice users, genre/date/location priorities), competitive analysis of Facebook and Do512</li>
+            <li><strong>M3 — Ideation &amp; prototyping:</strong> 20+ brainstormed ideas; paper prototype (filter + results list) and verbal prototype (goal-oriented questionnaire)</li>
+            <li><strong>M4 — Evaluation planning:</strong> Qualitative survey on paper prototype; empirical within-subjects plan comparing prototype vs. Meetup.com on clicks and result relevance</li>
+            <li><strong>M5 — Evaluation results:</strong> 25-participant qualitative survey; cognitive walkthrough of textual prototype; analysis and iteration recommendations</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Needfinding findings</h2>
+          <p>
+            <strong>Participant observation</strong> revealed friction at every task: searching
+            "running" required 6 extra clicks before a relevant event appeared; finding a book
+            club by name returned an error despite showing the correct group below; groups in
+            other cities were hidden until distance was set to "any distance."
+          </p>
+          <p>
+            <strong>Survey results</strong> (mostly novice users, 0–6 searches per year): genre
+            is the top priority, then date/time, then location. Users search for fun (social and
+            recreation/sports), typically on smartphones, a few days in advance—not urgent,
+            but mobile-optimized. Meetup and Facebook were the most common search platforms.
+          </p>
+          <p>
+            <strong>Competitive analysis:</strong> Local sites like Do512 make browsing easier;
+            Facebook requires filtering before showing local events; event data is fragmented
+            across platforms.
+          </p>
+
+          <div class="screenshot-gallery">
+            <figure>
+              <img src="../assets/meetup-hci/meetup-calendar-view.png" alt="Meetup.com calendar view — default search interface" loading="lazy">
+              <figcaption>Existing interface — calendar view (M1)</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/meetup-hci/needfinding-running-search.png" alt="Searching running on Meetup returns no relevant results until clicking through multiple dates" loading="lazy">
+              <figcaption>Needfinding — search "running" returns unrelated results</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/meetup-hci/needfinding-location-error.png" alt="Meetup shows no results for a known group until distance filter is widened" loading="lazy">
+              <figcaption>Needfinding — group hidden by default distance filter</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="content-block">
+          <h2>Ideation</h2>
+          <p>
+            Brainstorming produced 20+ ideas spanning filters, notifications, voice commands,
+            smartwatch haptics, and goal-oriented matching—before narrowing to filter-based
+            and questionnaire-based prototypes.
+          </p>
+          <figure class="screenshot-single">
+            <img src="../assets/meetup-hci/brainstorming-sheet.jpg" alt="Handwritten brainstorming list of event-finding feature ideas" loading="lazy">
+            <figcaption>Brainstorming sheet — finding local events (M3)</figcaption>
+          </figure>
+        </div>
+
+        <div class="content-block">
+          <h2>Design decisions</h2>
+          <p>
+            The primary prototype is a <strong>filter + results list</strong> interface with
+            five optional filters: genre, location, date(s), time(s), and number of attendees.
+            Filters toggle in/out of view; OR within a filter, AND across filters. Each result
+            shows all filter attributes at a glance.
+          </p>
+          <p>
+            A secondary prototype uses a <strong>goal-oriented questionnaire</strong>—matching
+            events to user intent (meet people vs. get out of the house vs. learn a skill)
+            rather than making users choose attributes manually.
+          </p>
+          <p>
+            Later iterations added a <strong>map-based view</strong> with location search,
+            event icons by category, modal summaries, and date picker—designed for consistency
+            with familiar map apps and direct manipulation.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Paper prototype</h2>
+          <p>
+            The primary prototype evaluated in M4/M5: collapsible filters (genre, location, dates,
+            times, attendees) above a scannable results list. OR within filters, AND across filters.
+          </p>
+          <figure class="screenshot-single">
+            <img src="../assets/meetup-hci/paper-prototype-filters.jpg" alt="Hand-drawn paper prototype of Meetup filter and results interface" loading="lazy">
+            <figcaption>Paper prototype — filters and results list (M3)</figcaption>
+          </figure>
+        </div>
+
+        <div class="content-block">
+          <h2>Evaluation results</h2>
+          <p>
+            Qualitative evaluation with 25 participants (23 classmates, 2 family members) on
+            the paper prototype:
+          </p>
+          <ul>
+            <li>92% agreed the interface looked easy to use; 84% agreed it looked enjoyable</li>
+            <li>Genre, location, date, and time filters rated highly (72–92% "frequently" or "very frequently")</li>
+            <li>Number of attendees filter less popular (40% frequent use)—as predicted</li>
+            <li>Participants suggested adding cost, age group, and recurring vs. one-off filters</li>
+            <li>Location filter drew the most iteration feedback (map view, neighborhoods, distance from current location)</li>
+          </ul>
+          <p>
+            Cognitive walkthrough identified tradeoffs in map icon granularity and confirmed
+            filter discoverability worked well for novice users—the target demographic.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Lessons learned</h2>
+          <p>
+            Conducting actual needfinding—not just applying heuristics—surfaced failures I
+            wouldn't have predicted from using Meetup casually (the 6-click running search,
+            the location distance trap). Survey platform bias (Facebook group recruitment)
+            was a real limitation I hadn't anticipated.
+          </p>
+          <p>
+            Qualitative evaluation produced actionable filter additions but also contradictory
+            feedback (some found the design clean, others cluttered)—a reminder that the same
+            interface reads differently depending on user context. The empirical comparison
+            plan (prototype vs. Meetup on click count and result relevance) was designed but
+            the qualitative phase alone validated core filter priorities.
+          </p>
+        </div>
+
+        <section class="artifacts">
+          <h2>Artifacts</h2>
+          <p>Full M1–M5 assignment reports documenting each phase of the design lifecycle.</p>
+
+          <h3>Design lifecycle (M assignments)</h3>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/meetup-hci/m1-problem-space.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Report</span>
+              <span class="artifact-label">M1 — Problem space</span>
+            </a>
+            <a class="artifact-card" href="../assets/meetup-hci/m2-needfinding.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Report</span>
+              <span class="artifact-label">M2 — Needfinding</span>
+            </a>
+            <a class="artifact-card" href="../assets/meetup-hci/m3-prototyping.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Report</span>
+              <span class="artifact-label">M3 — Prototyping</span>
+            </a>
+            <a class="artifact-card" href="../assets/meetup-hci/m4-evaluation-plan.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Report</span>
+              <span class="artifact-label">M4 — Evaluation plan</span>
+            </a>
+            <a class="artifact-card" href="../assets/meetup-hci/m5-evaluation-results.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Report</span>
+              <span class="artifact-label">M5 — Evaluation results</span>
+            </a>
+            <a class="artifact-card" href="../assets/meetup-hci/paper-prototype-filters.jpg" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Image</span>
+              <span class="artifact-label">Paper prototype</span>
+            </a>
+          </div>
+
+          <h3>Additional HCI coursework</h3>
+          <p class="artifact-note">Written assignments from the same course covering gulf of execution/evaluation, invisible interfaces, and OMSCS accessibility.</p>
+          <div class="artifact-grid">
+            <a class="artifact-card" href="../assets/hci-other-assignments/p1-oscar-registration.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Essay</span>
+              <span class="artifact-label">P1 — OSCAR registration</span>
+            </a>
+            <a class="artifact-card" href="../assets/hci-other-assignments/p2-task-analysis.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Essay</span>
+              <span class="artifact-label">P2 — Task analysis</span>
+            </a>
+            <a class="artifact-card" href="../assets/hci-other-assignments/p3-invisible-interfaces.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Essay</span>
+              <span class="artifact-label">P3 — Invisible interfaces</span>
+            </a>
+            <a class="artifact-card" href="../assets/hci-other-assignments/p4-goms-selection-rules.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Essay</span>
+              <span class="artifact-label">P4 — GOMS selection rules</span>
+            </a>
+            <a class="artifact-card" href="../assets/hci-other-assignments/p5-omscs-accessibility.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="artifact-type">Essay</span>
+              <span class="artifact-label">P5 — OMSCS &amp; accessibility</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../projects.html">← All projects</a> · &copy; 2026 Julia Nething</p>
+    </footer>
+  </body>
+</html>

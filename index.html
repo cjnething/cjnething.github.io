@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Julia Nething — Research Portfolio</title>
-    <meta name="description" content="Research portfolio exploring human capability, interaction design, and AI-native product experiences.">
+    <title>Julia Nething — Software, Learning &amp; Human Capability</title>
+    <meta name="description" content="Software engineer, educator, and researcher at the intersection of HCI, learning science, and AI.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,46 +15,145 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="Primary">
-        <a class="nav-logo" href="#">Julia Nething</a>
+        <a class="nav-logo" href="index.html">Julia Nething</a>
         <ul class="nav-links">
-          <li><a href="#research">Research</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="ai.html">AI</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero">
-        <p class="hero-eyebrow">Design · Research · Human Capability</p>
-        <h1 class="hero-title">Building products that help people become <em>more capable</em>, not just more engaged.</h1>
+        <p class="hero-eyebrow">Software · Education · Research</p>
+        <h1 class="hero-title hero-title-wide">Software engineer, educator, and researcher interested in human capability, learning, and AI.</h1>
         <p class="hero-lede">
-          I study how technology—especially AI—can expand what people are able to do,
-          think, and create. This portfolio collects research projects, prototypes,
-          and writing on skill development, interaction design, and human–AI collaboration.
+          Across my career and education, I've repeatedly been drawn to understanding how people
+          learn, solve problems, and develop expertise. I build software, teach engineers,
+          and design systems that help people become more capable—not just more engaged.
+        </p>
+        <p class="hero-lede">
+          AI is a natural continuation of those interests, not a recent pivot. The question
+          I've been pursuing for years is the same one that drew me toward coursework in
+          Educational Technology, Human-Computer Interaction, and Knowledge-Based AI:
+          how can technology help people think, learn, and do more?
         </p>
       </section>
 
-      <section id="research" class="section">
+      <section class="section section-bordered">
         <div class="section-header">
-          <h2>Research</h2>
-          <p>Selected projects exploring capability growth, new interaction paradigms, and measurable learning outcomes.</p>
+          <h2>Academic themes</h2>
+          <p>
+            Georgia Tech OMSCS, Interactive Intelligence specialization (now Artificial Intelligence), 4.0 GPA.
+            The pattern across my coursework matters more than any single class.
+          </p>
+        </div>
+
+        <div class="theme-grid">
+          <article class="theme-card theme-card-primary">
+            <h3>Human Learning &amp; Capability</h3>
+            <p class="theme-desc">How people learn, process information, and develop expertise—from different angles.</p>
+            <ul class="theme-courses">
+              <li>Educational Technology</li>
+              <li>Human-Computer Interaction</li>
+              <li>Data &amp; Visual Analytics</li>
+            </ul>
+          </article>
+
+          <article class="theme-card">
+            <h3>AI &amp; Intelligent Systems</h3>
+            <p class="theme-desc">Reasoning, decision-making, and intelligent behavior—enough depth to build with AI, focused on humans.</p>
+            <ul class="theme-courses">
+              <li>Artificial Intelligence</li>
+              <li>Knowledge-Based AI</li>
+              <li>AI for Robotics</li>
+              <li>Machine Learning for Trading</li>
+            </ul>
+          </article>
+
+          <article class="theme-card">
+            <h3>Software &amp; Product Development</h3>
+            <p class="theme-desc">Building reliable systems—and understanding how technology reaches and serves users.</p>
+            <ul class="theme-courses">
+              <li>Database Systems</li>
+              <li>Software Development Process</li>
+              <li>Digital Marketing</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="theme-note">
+          Data &amp; Visual Analytics sits in the learning cluster because it's fundamentally about
+          helping humans understand complex information—not just making charts. Digital Marketing
+          reflects the same product instinct: thinking about users, behavior, adoption, and communication.
+          <a href="about.html">Full background →</a>
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-header section-header-row">
+          <div>
+            <h2>Featured project</h2>
+            <p>Research-backed educational software with documented outcomes and artifacts.</p>
+          </div>
+          <a class="text-link" href="projects.html">All projects →</a>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-featured">
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="project-tag">EdTech</span>
+                <span class="project-tag">Research</span>
+                <span class="project-tag">Learning Science</span>
+              </div>
+              <span class="project-year">OMSCS</span>
+            </div>
+            <h3 class="project-title">
+              <a href="projects/recursion-immersion.html">Recursion Immersion</a>
+            </h3>
+            <p class="project-desc">
+              Solo EdTech research project: a full-stack web app combining multiple recursion
+              teaching strategies for novice adult programmers. Paper, lit reviews, videos, and
+              bootcamp evaluation data.
+            </p>
+            <a class="project-link" href="projects/recursion-immersion.html" aria-label="View Recursion Immersion project">
+              View project &amp; artifacts
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>More projects</h2>
+          <p>HCI research, information design, and product thinking—with original artifacts.</p>
         </div>
 
         <div class="project-grid">
           <article class="project-card">
             <div class="project-meta">
-              <span class="project-tag">HCI</span>
-              <span class="project-year">2025</span>
+              <div class="project-tags">
+                <span class="project-tag">HCI</span>
+                <span class="project-tag">User Research</span>
+              </div>
+              <span class="project-year">OMSCS</span>
             </div>
             <h3 class="project-title">
-              <a href="#">Research Project 1</a>
+              <a href="projects/meetup-hci.html">Meetup HCI Redesign</a>
             </h3>
             <p class="project-desc">
-              A placeholder for your first research project. Describe the problem you explored,
-              the interaction paradigm you tested, and what you learned about how users develop skill over time.
+              Full HCI design lifecycle for Meetup event search—needfinding, surveys, paper
+              prototypes, and qualitative evaluation with 25 participants. M1–M5 reports.
             </p>
-            <a class="project-link" href="#" aria-label="View Research Project 1">
+            <a class="project-link" href="projects/meetup-hci.html" aria-label="View Meetup HCI project">
               View project
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,18 +163,21 @@
 
           <article class="project-card">
             <div class="project-meta">
-              <span class="project-tag">Prototyping</span>
-              <span class="project-year">2024</span>
+              <div class="project-tags">
+                <span class="project-tag">Visualization</span>
+                <span class="project-tag">Information Design</span>
+              </div>
+              <span class="project-year">OMSCS</span>
             </div>
             <h3 class="project-title">
-              <a href="#">Research Project 2</a>
+              <a href="projects/municipal-bond-dva.html">Municipal Bond Pricing</a>
             </h3>
             <p class="project-desc">
-              A placeholder for your second research project. Link to a prototype, paper,
-              or demo that shows end-to-end thinking—from research insight to shipped feature.
+              ML + interactive visualization helping muni bond traders identify pricing outliers
+              across 260,000+ bonds. Report, poster, and demo video.
             </p>
-            <a class="project-link" href="#" aria-label="View Research Project 2">
-              View project
+            <a class="project-link" href="projects/municipal-bond-dva.html" aria-label="View Municipal Bond Pricing project">
+              View project &amp; artifacts
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -84,37 +186,20 @@
 
           <article class="project-card">
             <div class="project-meta">
-              <span class="project-tag">Learning Science</span>
-              <span class="project-year">2024</span>
+              <div class="project-tags">
+                <span class="project-tag">Product</span>
+                <span class="project-tag">User Research</span>
+              </div>
+              <span class="project-year">OMSCS</span>
             </div>
             <h3 class="project-title">
-              <a href="#">Research Project 3</a>
+              <a href="projects/sunrise-alarm.html">Sunrise Alarm Clock Redesign</a>
             </h3>
             <p class="project-desc">
-              A placeholder for your third research project. Consider highlighting how you measured
-              capability outcomes rather than engagement metrics, and what that revealed.
+              Review analysis and heuristic evaluation of a Philips sunrise alarm—redesign
+              mockups addressing button discoverability in groggy-morning context.
             </p>
-            <a class="project-link" href="#" aria-label="View Research Project 3">
-              View project
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <span class="project-tag">AI × Product</span>
-              <span class="project-year">2023</span>
-            </div>
-            <h3 class="project-title">
-              <a href="#">Research Project 4</a>
-            </h3>
-            <p class="project-desc">
-              A placeholder for your fourth research project. Ideal for work on AI-native experiences,
-              developer tools, or platforms where user mastery matters more than time-on-site.
-            </p>
-            <a class="project-link" href="#" aria-label="View Research Project 4">
+            <a class="project-link" href="projects/sunrise-alarm.html" aria-label="View Sunrise Alarm project">
               View project
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -124,40 +209,44 @@
         </div>
       </section>
 
-      <section id="about" class="section section-about">
-        <div class="about-grid">
-          <div class="section-header">
-            <h2>About</h2>
-          </div>
-          <div class="about-content">
-            <p>
-              I'm a researcher and builder interested in the intersection of product design,
-              learning sciences, and AI. I care about experiences that make people progressively
-              more capable, curious, and empowered—integrating skill development into product
-              design rather than treating it as an afterthought.
-            </p>
-            <p>
-              My work spans rapid prototyping, user research, and production engineering.
-              I'm skeptical of tutorials and onboarding flows that optimize for engagement;
-              I'd rather measure whether someone can actually do something new afterward.
-            </p>
-            <ul class="about-highlights">
-              <li>Full-stack prototyping with strong front-end craft</li>
-              <li>HCI, skill acquisition, and capability-focused metrics</li>
-              <li>Translating research insights into shipped product</li>
-            </ul>
-          </div>
+      <section class="section section-bordered">
+        <div class="section-header">
+          <h2>Explore</h2>
+          <p>Different facets of the same underlying question: how do we help people become more capable?</p>
+        </div>
+
+        <div class="explore-grid">
+          <article class="explore-card">
+            <h3><a href="about.html">About</a></h3>
+            <p>Over ten years of software engineering, Georgia Tech OMSCS, and the through-line connecting them.</p>
+          </article>
+          <article class="explore-card">
+            <h3><a href="teaching.html">Teaching</a></h3>
+            <p>Hack Reactor mentorship, adult learners, and what teaching revealed about skill acquisition.</p>
+          </article>
+          <article class="explore-card">
+            <h3><a href="research.html">Research Software</a></h3>
+            <p>Puerto Rico disaster recovery tools and co-authored RAND research—building alongside domain experts.</p>
+          </article>
+          <article class="explore-card">
+            <h3><a href="philosophy.html">Philosophy</a></h3>
+            <p>What I believe about learning, capability, and technology as augmentation—not replacement.</p>
+          </article>
+          <article class="explore-card">
+            <h3><a href="ai.html">AI</a></h3>
+            <p>Knowledge-Based AI coursework, human–AI collaboration, and capability-focused applications.</p>
+          </article>
         </div>
       </section>
 
-      <section id="contact" class="section section-contact">
+      <section class="section section-contact">
         <div class="contact-inner">
           <h2>Get in touch</h2>
-          <p>Open to conversations about human capability, AI product design, and research-driven building.</p>
+          <p>Interested in human capability, educational technology, and research-driven product building.</p>
           <div class="contact-links">
-            <a href="mailto:hello@example.com">hello@example.com</a>
+            <a href="mailto:cjnething@gmail.com">cjnething@gmail.com</a>
+            <a href="https://www.linkedin.com/in/nething/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://github.com/cjnething" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </section>
