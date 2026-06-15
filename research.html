@@ -20,6 +20,7 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="writing.html">Writing</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="research.html" aria-current="page">Research</a></li>
           <li><a href="questions.html">Questions</a></li>
@@ -34,9 +35,9 @@
         <p class="hero-eyebrow">Research Software</p>
         <h1 class="hero-title hero-title-wide">Building tools for researchers, alongside researchers.</h1>
         <p class="hero-lede">
-          Research software engineering is a distinct skill: translating the needs of domain experts
-          into software that supports real workflows—not imposing engineering assumptions on research
-          problems.
+          Research software engineering is a distinct skill: building tools that let domain experts
+          do their jobs—self-service infrastructure, validation systems, data pipelines—not imposing
+          engineering assumptions on research problems.
         </p>
       </section>
 
@@ -45,10 +46,31 @@
           <h2>RAND Corporation</h2>
           <p>
             At RAND Corporation (Nov 2018–Nov 2019), I worked as a full-stack research software
-            engineer—building tools alongside researchers, policy analysts, and domain experts whose
-            needs don't map cleanly onto typical product requirements.
+            engineer. My work focused on building software that let researchers do their jobs more
+            effectively—from self-service cloud deployment to custom validation tools and data
+            collection pipelines—not on shipping generic internal apps.
           </p>
-          <p><strong>Stack:</strong> React, JavaScript, Django, Python, AWS, Docker, Git.</p>
+          <p>
+            The through-line was working with people whose expertise is something other than
+            software engineering: collaborating with domain experts, iterating when requirements
+            were ambiguous, and refining systems based on how researchers actually used them.
+          </p>
+          <p><strong>Stack:</strong> React, JavaScript, Django, Python, Scrapy, AWS, Docker, Git.</p>
+        </div>
+
+        <div class="content-block">
+          <h2>Self-service AWS deployment</h2>
+          <p>
+            I built an internal tool that let researchers provision cloud infrastructure on AWS
+            without a manual handoff to ops. Before that, standing up an environment meant waiting
+            on someone else; after, researchers could do it themselves when they needed to run
+            something.
+          </p>
+          <p>
+            That's a developer-tools story in a research context: removing friction that didn't
+            teach anyone anything, so experts could spend their time on the work they were actually
+            there to do.
+          </p>
         </div>
 
         <div class="content-block">
@@ -63,12 +85,22 @@
           <ul>
             <li>Designing a dashboard for tracking validation progress across recovery cost estimates</li>
             <li>Building file upload and organization features tailored to researcher workflows</li>
-            <li>Working directly with the Puerto Rico team to iterate on what they needed—not what I assumed they needed</li>
+            <li>Collaborating with the Puerto Rico team to iterate on features and validation logic—not just taking initial specs and disappearing</li>
             <li>Supporting accuracy and reproducibility in a high-stakes policy context</li>
           </ul>
           <p>
             Background on the broader recovery effort:
             <a href="https://www.rand.org/hsrd/hsoac/projects/puerto-rico-recovery.html" target="_blank" rel="noopener noreferrer">RAND's Puerto Rico disaster recovery planning project</a>.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Dark web research support</h2>
+          <p>
+            I also built a Scrapy-based pipeline in Python to scrape and analyze dark web product
+            listings—open-ended data collection to support research initiatives researchers couldn't
+            easily do themselves. Another example of the same pattern: researchers with a question,
+            software as the tool to help them investigate it.
           </p>
         </div>
 
@@ -103,6 +135,11 @@
             in their domain but not in yours, where requirements are discovered through collaboration
             rather than specified upfront, and where the cost of getting something wrong is measured
             in research quality, not just user retention.
+          </p>
+          <p>
+            I keep ending up in that situation: RAND researchers, Hack Reactor students, Capital One
+            internal teams, Thorn data scientists. The job is rarely "build what the ticket says."
+            It's figure out what non-engineers need to be more effective, and build that.
           </p>
           <p>
             This experience shaped how I approach user research, requirements gathering, and the
