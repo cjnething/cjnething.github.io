@@ -798,12 +798,11 @@ img {
 }
 
 .resume-entry-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem var(--space-sm);
   align-items: baseline;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  margin-bottom: 0.25rem;
 }
 
 .resume-entry h3 {
@@ -811,12 +810,21 @@ img {
   font-weight: 600;
   margin: 0;
   color: var(--color-text);
+  line-height: 1.35;
 }
 
 .resume-date {
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   white-space: nowrap;
+  text-align: right;
+}
+
+.resume-entry > p {
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: 1.55;
 }
 
 .resume-entry ul {
