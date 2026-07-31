@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2PSV8H1MR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E2PSV8H1MR');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acquired Taste — Julia Nething</title>
+    <meta name="description" content="Independently designed, built, and deployed handbag discovery platform with advanced search, analytics, and outreach-driven launch.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-logo" href="../index.html">Julia Nething</a>
+        <ul class="nav-links">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../projects.html" aria-current="page">Projects</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../ai.html">AI</a></li>
+          <li><a href="../writing.html">Writing</a></li>
+          <li><a href="../questions.html">Questions</a></li>
+          <li><a href="../philosophy.html">Philosophy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-compact">
+        <div class="project-tags hero-tags">
+          <span class="project-tag">Product</span>
+          <span class="project-tag">Full-Stack</span>
+          <span class="project-tag">AI-assisted</span>
+        </div>
+        <h1 class="hero-title hero-title-wide">Acquired Taste</h1>
+        <p class="hero-lede">
+          A search engine for discovering independent handbags through detailed design
+          attributes that traditional retailers don’t expose—strap drop, laptop fit,
+          key leash, shipping, and hundreds more.
+        </p>
+        <p class="hero-lede">Sole engineer · Live pre-launch demo · 2026</p>
+      </section>
+
+      <dl class="ship-facts ship-facts-hero">
+        <div>
+          <dt>Status</dt>
+          <dd>Live</dd>
+        </div>
+        <div>
+          <dt>Tech</dt>
+          <dd>Next.js · FastAPI · PostgreSQL · Docker</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Sole engineer</dd>
+        </div>
+      </dl>
+
+      <nav class="quick-links" aria-label="Quick links">
+        <span class="quick-links-label">Quick links</span>
+        <a href="https://www.getacquiredtaste.com" target="_blank" rel="noopener noreferrer">Live site</a>
+        <a href="https://www.getacquiredtaste.com/browse" target="_blank" rel="noopener noreferrer">Browse</a>
+        <a href="https://www.getacquiredtaste.com/about" target="_blank" rel="noopener noreferrer">About the product</a>
+      </nav>
+
+      <div class="page-content prose">
+        <div class="content-block">
+          <h2>Overview</h2>
+          <p>
+            Independently designed, built, and deployed a handbag discovery platform with
+            advanced attribute search, comparison, analytics, and an outreach-driven launch.
+            Shoppers still buy on the designer’s site; Acquired Taste surfaces the decision
+            details retailers bury in product copy.
+          </p>
+          <p>
+            Built end-to-end—product definition, data model, ingest/curator tooling, shopper
+            UX, deployment, and iteration from real user feedback—while using AI as a
+            development and ingest assistant, not as a source of invented metadata.
+          </p>
+          <p>
+            <a class="btn-primary" href="https://www.getacquiredtaste.com" target="_blank" rel="noopener noreferrer">Visit Acquired Taste</a>
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>Problem</h2>
+          <p>
+            People often already know what they want—“red leather crossbody with silver
+            hardware and a back pocket”—but retail search can’t express it. Useful specs
+            (laptop fit, key leash, strap drop, shipping destinations) exist in copy and
+            can’t be filtered. Independent brands lose shoppers who give up before finding them.
+          </p>
+        </div>
+
+        <div class="content-block">
+          <h2>What shipped</h2>
+          <ul>
+            <li><strong>Attribute-first browse</strong> — facet search over structured handbag specs, not visual similarity as the primary loop</li>
+            <li><strong>Quiz → shortlist</strong> — guided discovery that narrows to a manageable set of bags</li>
+            <li><strong>Compare</strong> — side-by-side decision details across candidates</li>
+            <li><strong>Curator / brand admin</strong> — URL ingest → AI pre-fill → human edit → verify → publish</li>
+            <li><strong>Analytics</strong> — PostHog instrumentation for shopper funnels, outbound clicks, and waitlist/brand leads</li>
+            <li><strong>Production deploy</strong> — HTTPS web + API + PostgreSQL on a public domain, with waitlist and brand outreach paths</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Stack</h2>
+          <ul>
+            <li><strong>Web:</strong> Next.js, React, TypeScript</li>
+            <li><strong>API:</strong> FastAPI, SQLAlchemy, Alembic</li>
+            <li><strong>Data:</strong> PostgreSQL 16</li>
+            <li><strong>Infra:</strong> Docker; hosted production (Vercel + API/DB)</li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <h2>Why it belongs here</h2>
+          <p>
+            The academic projects on this site show research foundations—learning science,
+            HCI, and information design. Acquired Taste is the shipping counterpart: a product
+            I conceived, built, deployed, and am actively improving in the real world.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-footer-tagline">Curious about something here? <a href="mailto:cjnething@gmail.com">Reach out</a>.</p>
+      <p class="site-footer-links">
+        <a href="mailto:cjnething@gmail.com">Email</a>
+        <span aria-hidden="true"> · </span>
+        <a href="https://www.linkedin.com/in/nething/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span aria-hidden="true"> · </span>
+        <a href="https://github.com/cjnething" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <p class="site-footer-copy">&copy; 2026 Julia Nething</p>
+    </footer>
+  </body>
+</html>
